@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-REPO_URL="https://github.com/<your-username>/<your-repo>.git"
+REPO_URL="https://github.com/adel-hesham/-Scalable-Web-Application-with-ALB-and-Auto-Scaling"
 
 dnf update -y
 dnf install -y python3 python3-pip git
