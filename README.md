@@ -6,7 +6,7 @@ This repository is deployed manually through the AWS Console/CLI (no Terraform o
 
 ## Architecture diagram
 
-
+https://github.com/adel-hesham/-Scalable-Web-Application-with-ALB-and-Auto-Scaling/blob/main/arch_diagram.pdf
 
 ## Architecture flow
 
