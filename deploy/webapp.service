@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance serving the scalable web app
+After=network.target
+
+[Service]
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/opt/webapp/app
+ExecStart=/opt/webapp/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8080 app:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,101 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "ALB request count",
+        "metrics": [
+          ["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "REPLACE_WITH_ALB_ID"]
+        ],
+        "period": 60,
+        "stat": "Sum",
+        "region": "REPLACE_WITH_REGION"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "ALB target response time",
+        "metrics": [
+          ["AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", "REPLACE_WITH_ALB_ID"]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "REPLACE_WITH_REGION"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Auto Scaling group CPU utilization",
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "AutoScalingGroupName", "REPLACE_WITH_ASG_NAME"]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "REPLACE_WITH_REGION"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "In-service instance count",
+        "metrics": [
+          ["AWS/ApplicationELB", "HealthyHostCount", "TargetGroup", "REPLACE_WITH_TG_ID", "LoadBalancer", "REPLACE_WITH_ALB_ID"],
+          ["AWS/ApplicationELB", "UnHealthyHostCount", "TargetGroup", "REPLACE_WITH_TG_ID", "LoadBalancer", "REPLACE_WITH_ALB_ID"]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "REPLACE_WITH_REGION"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 12,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "RDS CPU utilization",
+        "metrics": [
+          ["AWS/RDS", "CPUUtilization", "DBInstanceIdentifier", "REPLACE_WITH_DB_INSTANCE_ID"]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "REPLACE_WITH_REGION"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 12,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "RDS database connections",
+        "metrics": [
+          ["AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "REPLACE_WITH_DB_INSTANCE_ID"]
+        ],
+        "period": 60,
+        "stat": "Average",
+        "region": "REPLACE_WITH_REGION"
+      }
+    }
+  ]
+}

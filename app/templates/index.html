@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalable Web Application Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <h1>Scalable web application</h1>
+    <p>Served by instance <strong>{{ instance_id }}</strong></p>
+    <p>Availability Zone <strong>{{ az }}</strong></p>
+    <p class="hint">
+      Refresh a few times — the Application Load Balancer distributes
+      requests across EC2 instances and Availability Zones.
+    </p>
+  </main>
+</body>
+</html>
